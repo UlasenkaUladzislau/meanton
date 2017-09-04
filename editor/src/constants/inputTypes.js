@@ -1,0 +1,3 @@
+export const TEXT_INPUT = 'TEXT_INPUT';
+export const SLIDER_INPUT = 'SLIDER_INPUT';
+export const DROPDOWN_INPUT = 'DROPDOWN_INPUT';

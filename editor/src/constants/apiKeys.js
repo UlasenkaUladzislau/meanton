@@ -1,0 +1,1 @@
+export const YANDEX_TRANSLATE_API_KEY = 'trnsl.1.1.20170730T132106Z.b41e03e10bc6c1be.e6ba6e6c5a44cc4223eeaff34ebe254d11c0fc30';
