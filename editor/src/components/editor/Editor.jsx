@@ -48,7 +48,6 @@ export default class Editor extends React.Component {
           data: { ...activeDictionary },
         })
         .then(res => {
-            console.log(res.data);
             const dictionaries = this.state.dictionaries;
             dictionaries.push(res.data);
             this.setState({

@@ -1,0 +1,14 @@
+certifi==2017.7.27.1
+chardet==3.0.4
+Django==1.11.4
+django-model-utils==3.0.0
+django-webpack-loader==0.5.0
+djangorestframework==3.6.4
+gTTS==1.2.2
+gTTS-token==1.1.1
+idna==2.6
+pydub==0.20.0
+pytz==2017.2
+requests==2.18.4
+six==1.10.0
+urllib3==1.22
