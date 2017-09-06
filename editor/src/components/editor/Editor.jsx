@@ -2,9 +2,10 @@ import React from 'react';
 import axios from 'axios';
 import Cookie from '../../utils/cookie.js';
 import defaultDictionary from '../../constants/defaultDictionary.js'
-import { DICTIONARIES_URL, LOGOUT } from '../../constants/urls.js'
+import { DICTIONARIES_URL } from '../../constants/urls.js'
 import DictionariesMenu from '../dictionaries/DictionariesMenu.jsx'
 import DictionaryDetail from '../dictionaries/DictionaryDetail.jsx'
+import DictionarySettings from '../dictionaries/DictionarySettings.jsx';
 
 
 export default class Editor extends React.Component {
@@ -67,12 +68,15 @@ export default class Editor extends React.Component {
     render() {
          return (
              <div className="row">
-                 <div className="col-md-3">
-                     <a href={LOGOUT}>Log out</a>
+                 <div>
                      <DictionariesMenu
                          createNewDictionary={this.createNewDictionary}
                          dictionaries={this.state.dictionaries}
                      />
+                     {this.state.activeDictionary && <DictionarySettings
+                        changeActiveDictionarySetting={this.changeActiveDictionarySetting}
+                        activeDictionary={this.state.activeDictionary}
+                     />}
                      {this.state.activeDictionary && <DictionaryDetail
                          changeActiveDictionarySetting={this.changeActiveDictionarySetting}
                          activeDictionary={this.state.activeDictionary}

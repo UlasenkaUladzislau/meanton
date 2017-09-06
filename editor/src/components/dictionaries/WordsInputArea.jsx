@@ -24,8 +24,11 @@ export default class WordsInputArea extends React.Component {
 
     render() {
         return (
-            <div>
-                <input ref="input" type="text" onKeyPress={this.handleKeyPress} />
+            <div className="form-group">
+                <div>
+                    <span>Put word and press Enter</span>
+                </div>
+                <input className="form-control" ref="input" type="text" onKeyPress={this.handleKeyPress} />
             </div>
         );
     }

@@ -1,16 +1,11 @@
 import React from 'react';
 import WordsInputArea from './WordsInputArea.jsx';
 import WordsPreviewArea from './WordsPreviewArea.jsx';
-import DictionarySettings from './DictionarySettings.jsx';
 
 export default class DictionaryDetail extends React.Component {
     render() {
         return (
-        <div>
-            <DictionarySettings
-                changeActiveDictionarySetting={this.props.changeActiveDictionarySetting}
-                activeDictionary={this.props.activeDictionary}
-            />
+        <div className="col-md-4">
             <WordsInputArea
                 {...this.props.activeDictionary}
                 inputWords={this.props.inputWords}

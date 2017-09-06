@@ -5,7 +5,7 @@ import translationFields from '../../constants/translationFields.js'
 export default class DictionarySettings extends React.Component {
     render() {
         return (
-            <div>
+            <div className="col-md-4">
                 {translationFields.map((input) =>
                     <InputFactory
                         key={input.name}

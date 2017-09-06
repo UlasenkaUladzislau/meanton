@@ -9,10 +9,12 @@ from meanton.settings import MEDIA_ROOT
 def generate_mp3_dict_from_text(dictionary):
     translations = loads(dictionary.translations)
     if translations:
+        # TODO: need to find way to generate mp3 file without unnecessary saving temporary files
         empty_file = AudioSegment.from_mp3(join(MEDIA_ROOT, 'silence.mp3'))
-        the_gap_between = empty_file[:dictionary.time_between_translations * 10]
-        the_gap_before = empty_file[:dictionary.time_before_translation * 10]
+        the_gap_between = empty_file[:dictionary.time_between_translations]
+        the_gap_before = empty_file[:dictionary.time_before_translation]
         file = empty_file[:1]
+
         for translation in translations:
             from_world = gTTS(text=translation['input'], lang=dictionary.input_lang, slow=True)
             from_world.save(join(MEDIA_ROOT, 'from_world.mp3'))

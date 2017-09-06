@@ -45,13 +45,16 @@ export default [{
     name: 'time_before_translation',
     label: 'Time Before',
     min: 1,
-    max: 500,
+    max: 5000,
     inputType: SLIDER_INPUT,
+    postfix: 'ms',
+
 }, {
     classes: 'form-control',
     name: 'time_between_translations',
     label: 'Time Between',
     min: 1,
-    max: 500,
+    max: 5000,
     inputType: SLIDER_INPUT,
+    postfix: 'ms',
 }]

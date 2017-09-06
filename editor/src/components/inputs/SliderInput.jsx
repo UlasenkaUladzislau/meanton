@@ -8,14 +8,25 @@ export default class SliderInput extends React.Component {
     };
 
     render() {
-         return (
-              <input
-                  type="range"
-                  defaultValue={this.props.value}
-                  min={this.props.min}
-                  max={this.props.max}
-                  onChange={this.handleOnChange}
-              />
+        const spanStyles = {
+            display: 'inline',
+        };
+        const inputStyles = {
+            display: 'inline',
+            width: '80%',
+        };
+        return (
+             <div>
+                 <input
+                     style={inputStyles}
+                     type="range"
+                     defaultValue={this.props.value}
+                     min={this.props.min}
+                     max={this.props.max}
+                     onChange={this.handleOnChange}
+                 />
+                 <span style={spanStyles}>{this.props.value}{this.props.postfix}</span>
+             </div>
         )
     }
 }
